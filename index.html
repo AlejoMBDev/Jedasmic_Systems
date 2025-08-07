@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/Icono-web.png" type="image/x-icon">
+    <title>Jedasmic Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+            color: #E0E0E0;
+        }
+        .hero-section {
+            background-image: linear-gradient(to bottom, rgba(11, 15, 25, 0.75), rgba(11, 15, 25, 1)), url('assets/Portada.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+        }
+        .tech-slider .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14); /* 250px por logo, 7 logos x 2 para el bucle */
+        }
+        .tech-slider .slide {
+            width: 250px;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-250px * 7)); } /* Mueve la mitad de la tira */
+        }
+        .form-container {
+            background-color: #111827;
+            border: 1px solid #374151;
+            border-radius: 1.5rem;
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.1);
+        }
+        .team-card {
+            background-color: #1F2937;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section min-h-screen flex flex-col justify-center items-center text-center px-4 py-16">
+            <div class="max-w-4xl">
+                <!-- LOGO AÑADIDO AQUÍ -->
+                <img src="assets/Logo.png" alt="Logo de Jedasmic Systems" class="h-28 w-28 object-cover rounded-full mx-auto mb-3">
+                <h1 class="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+                    Aquí la innovación cobra vida: <br><span class="text-[#005F94] text-6xl md:text-7xl"> Jedasmic Systems</span> <br>convierte tus ideas en experiencias digitales impactantes.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Creamos interfaces de usuario intuitivas, rápidas y visualmente atractivas que impulsan el crecimiento de tu negocio en la web y aplicaciones móviles.
+                </p>
+                <a href="https://wa.me/573186750806?text=Hola,%20¡Quiero%20construir%20un%20...!" target="_blank" class="bg-[#005F94] text-white px-8 py-4 rounded-lg font-bold text-lg inline-block cta-button">
+                    Contáctanos
+                </a>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-6">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Nuestros Servicios</h2>
+                    <p class="text-gray-400 mt-3 text-lg">Soluciones digitales para cada necesidad.</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <!-- Fila 1 -->
+                    <div class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-8 rounded-xl border border-gray-700 text-center flex flex-col items-center">
+                        <div class="text-indigo-400 mb-4"><i class="fas fa-code fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Desarrollo Web</h3>
+                        <p class="text-gray-400">Sitios y Aplicaciones web a la medida, desarrollados con las últimas tecnologías.</p>
+                    </div>
+                    <div class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-8 rounded-xl border border-gray-700 text-center flex flex-col items-center">
+                        <div class="text-indigo-400 mb-4"><i class="fas fa-mobile-alt fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Desarrollo de Apps Hibridas</h3>
+                        <p class="text-gray-400">Experiencias móviles fluidas para iOS y Android.</p>
+                    </div>
+                    <div class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-8 rounded-xl border border-gray-700 text-center flex flex-col items-center">
+                        <div class="text-indigo-400 mb-4"><i class="fas fa-palette fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Diseño UI/UX</h3>
+                        <p class="text-gray-400">Interfaces centradas en el usuario, intuitivas, agradables y funcionales.</p>
+                    </div>
+                    <!-- Fila 2 -->
+                    <div class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-8 rounded-xl border border-gray-700 text-center flex flex-col items-center">
+                        <div class="text-indigo-400 mb-4"><i class="fas fa-rocket fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Optimización</h3>
+                        <p class="text-gray-400">Mejoramos la velocidad y rendimiento de tu sitio web actual.</p>
+                    </div>
+                    <div class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-8 rounded-xl border border-gray-700 text-center flex flex-col items-center">
+                        <div class="text-indigo-400 mb-4"><i class="fas fa-desktop fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Desarrollo No-Code</h3>
+                        <p class="text-gray-400">Desarrollo web con herramientas no-code, diseño visual, configuración de dominio y publicación.</p>
+                    </div>
+                    <div class="w-full md:w-1/3 lg:w-1/4 bg-gray-800 p-8 rounded-xl border border-gray-700 text-center flex flex-col items-center">
+                        <div class="text-indigo-400 mb-4"><i class="fas fa-shield-alt fa-3x"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Mantenimiento</h3>
+                        <p class="text-gray-400">Soporte y actualizaciones para que tu web esté siempre al día.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Slider Section -->
+        <section class="py-24 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-16">Tecnologias</h2>
+            </div>
+            <div class="tech-slider relative w-full overflow-hidden">
+                <div class="slide-track">
+                    <!-- Logos x2 para el bucle infinito -->
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/html.svg" alt="HTML logo" class="h-20 w-20 object-contain"><p class="mt-2">HTML</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/css-5.svg" alt="CSS logo" class="h-20 w-20 object-contain"><p class="mt-2">CSS</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/js.svg" alt="JavaScript logo" class="h-20 w-20 object-contain"><p class="mt-2">JavaScript</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/react-2.svg" alt="React logo" class="h-20 w-20 object-contain"><p class="mt-2">React</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/angular-icon-1.svg" alt="Angular logo" class="h-20 w-20 object-contain"><p class="mt-2">Angular</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/flutter.svg" alt="Flutter logo" class="h-20 w-20 object-contain"><p class="mt-2">Flutter</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/figma-icon.svg" alt="Figma logo" class="h-20 w-20 object-contain"><p class="mt-2">Figma</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/python.svg" alt="Python logo" class="h-20 w-20 object-contain"><p class="mt-2">Python</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/tailwind-css-2.svg" alt="Tailwind CSS logo" class="h-20 w-20 object-contain"><p class="mt-2">Tailwind</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/nodejs.svg" alt="Nodejs logo" class="h-20 w-20 object-contain"><p class="mt-2">Node.JS</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/git.svg" alt="Git logo" class="h-20 w-20 object-contain"><p class="mt-2">Git</p></div>
+                    <!-- Repetición -->
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/html.svg" alt="HTML logo" class="h-20 w-20 object-contain"><p class="mt-2">HTML</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/css-5.svg" alt="CSS logo" class="h-20 w-20 object-contain"><p class="mt-2">CSS</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/js.svg" alt="JavaScript logo" class="h-20 w-20 object-contain"><p class="mt-2">JavaScript</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/react-2.svg" alt="React logo" class="h-20 w-20 object-contain"><p class="mt-2">React</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/angular-icon-1.svg" alt="Angular logo" class="h-20 w-20 object-contain"><p class="mt-2">Angular</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/flutter.svg" alt="Flutter logo" class="h-20 w-20 object-contain"><p class="mt-2">Flutter</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/figma-icon.svg" alt="Figma logo" class="h-20 w-20 object-contain"><p class="mt-2">Figma</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/python.svg" alt="Python logo" class="h-20 w-20 object-contain"><p class="mt-2">Python</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/tailwind-css-2.svg" alt="Tailwind CSS logo" class="h-20 w-20 object-contain"><p class="mt-2">Tailwind</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/nodejs.svg" alt="Nodejs logo" class="h-20 w-20 object-contain"><p class="mt-2">Node.JS</p></div>
+                    <div class="slide flex flex-col items-center justify-center"><img src="assets/icons/git.svg" alt="Git logo" class="h-20 w-20 object-contain"><p class="mt-2">Git</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (Sección de Portafolio) -->
+        <section id="portafolio" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-6">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">Nuestro Trabajo</h3>
+                    <p class="text-gray-400 mt-2">Proyectos que nos enorgullecen.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Elemento del Portafolio 1 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden group">
+                        <!-- La imagen tiene un efecto de zoom al pasar el mouse sobre la tarjeta -->
+                        <img src="assets/e-commerce.png" alt="[Imagen de un proyecto de e-commerce]" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6 text-center">
+                            <h4 class="text-2xl font-bold text-white">E-commerce "TechZone"</h4>
+                            <p class="text-gray-400 mt-2">Desarrollo de una plataforma e-commerce de alto rendimiento con React y Next.js. La interfaz es responsive, modular y centrada en la experiencia de usuario. Se priorizó escalabilidad, accesibilidad y buenas prácticas de desarrollo frontend.</p>
+                        </div>
+                    </div> 
+                    <!-- Elemento del Portafolio 2 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden group">
+                        <a href="https://www.bsigr.com/" target="_blank" rel="noopener">
+                            <img src="assets/BSI_Group.png" alt="[Imagen de BSIGR]" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </a>
+                        <div class="p-6 text-center">
+                            <h4 class="text-2xl font-bold text-white">Sitio Web "BSI Group"</h4>
+                            <p class="text-gray-400 mt-2">Diseño y desarrollo del sitio web corporativo de la empresa BSI Group mediante herramientas no-code. Configuración del dominio, integración de correos electrónicos empresariales y despliegue completo del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Sección de Preguntas Frecuentes) -->
+        <section id="faq" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">Preguntas Frecuentes</h3>
+                    <p class="text-gray-400 mt-2">Resolvemos tus dudas.</p>
+                </div>
+                <div class="space-y-4">
+                    <!-- Pregunta Frecuente 1 (Acordeón) -->
+                    <div class="faq-item bg-gray-900 rounded-lg text-center">
+                        <!-- La etiqueta <details> crea un widget de revelación nativo -->
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center font-semibold text-white text-lg">
+                                ¿Cuánto cuesta un proyecto de desarrollo web?
+                                <!-- Icono de flecha que rotará con JavaScript -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-400">
+                                Cada proyecto es único. El costo depende de la complejidad, las funcionalidades requeridas y el alcance del trabajo. Contáctanos para una cotización personalizada y sin compromiso.
+                            </div>
+                        </details>
+                    </div>
+                    <!-- Pregunta Frecuente 2 -->
+                    <div class="faq-item bg-gray-900 rounded-lg text-center">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center font-semibold text-white text-lg">
+                                ¿Cuánto tiempo se tarda en completar un proyecto?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-400">
+                                Un sitio web informativo simple puede tomar de 4 a 6 semanas, mientras que una aplicación web compleja puede requerir varios meses. Establecemos un cronograma detallado al inicio de cada proyecto.
+                            </div>
+                        </details>
+                    </div>
+                    <!-- Pregunta Frecuente 3 -->
+                    <div class="faq-item bg-gray-900 rounded-lg text-center">
+                        <details>
+                            <summary class="p-6 cursor-pointer flex justify-between items-center font-semibold text-white text-lg">
+                                ¿Ofrecen servicios de mantenimiento y soporte?
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                            </summary>
+                            <div class="p-6 pt-0 text-gray-400">
+                                ¡Sí! Ofrecemos planes de soporte y mantenimiento para asegurar que tu sitio o aplicación se mantenga actualizado, seguro y funcionando de manera óptima después del lanzamiento.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario y Equipo -->
+        <section id="contacto" class="py-24">
+            <div class="container mx-auto px-4">
+                <!-- Contenedor del Formulario -->
+                <div class="form-container max-w-4xl mx-auto p-8 md:p-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-8">¡ Cuéntanos todo sobre tu idea !</h2>
+                    <!-- Campos del formulario -->
+                    <form action="https://formspree.io/f/mwpqwbbn" method="POST" target="_blank">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-300">¿Qué idea realizarás? <span class="text-red-500">*</span></label>
+                                <!-- Añadido name="software_type" -->
+                                <input type="text" name="software_type" placeholder="Un E-commerce, un sitio web ?" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-[#345D7E] focus:outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-300">Nombre de la Empresa</label>
+                                <!-- Añadido name="company_name" -->
+                                <input type="text" name="company_name" placeholder="Jedasmic Systems" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-[#345D7E] focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-300">Nombre Completo <span class="text-red-500">*</span></label>
+                                <!-- Añadido name="full_name" -->
+                                <input type="text" name="full_name" placeholder="Tu Nombre" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-[#345D7E] focus:outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-300">Correo <span class="text-red-500">*</span></label>
+                                <!-- Añadido name="email" -->
+                                <input type="email" name="email" placeholder="tuemail@ejemplo.com" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-[#345D7E] focus:outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-300">Teléfono</label>
+                                <!-- Añadido name="phone" -->
+                                <input type="tel" name="phone" placeholder="+57 300 123 4567" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-[#345D7E] focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block mb-2 text-sm font-medium text-gray-300">Ciudad o País <span class="text-red-500">*</span></label>
+                                <!-- Añadido name="location" -->
+                                <input type="text" name="location" placeholder="Bogotá - Colombia" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-[#345D7E] focus:outline-none" required>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <button type="submit" class="w-full md:w-auto bg-[#345D7E] text-white px-12 py-3 rounded-lg font-bold text-lg cta-button">
+                            Siguiente
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sección del Equipo -->
+                <div class="mt-24">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-10">¿Quién está detrás de Jedasmic Systems? </h2>
+                    <h3 class="text-2xl font-bold text-white text-center mb-10">Fundador & Desarrollador</h3>
+                    <div class="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+                        <div class="team-card rounded-lg p-6 text-center border border-[#005F94]">
+                            <img class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[#005F94]" src="assets/AlejoMB.png" alt="[Foto de AlejoMB]">
+                            <h3 class="text-4xl font-bold text-white">Alejo MB.Dev</h3>
+                            <p class="text-[#005F94] mb-4 font-bold">Ingeniero de Sistemas - Frontend Dev</p>
+                            <p class="text-gray-400 mb-6">Un apasionado por crear experiencias digitales únicas y funcionales. Con experiencia en desarrollo web y móvil, siempre buscando la innovación.</p>
+                            <div class="flex justify-center space-x-4 text-2xl text-gray-400">
+                                <a href="https://alejombdev.github.io/Portfolio/" target="_blank" class="hover:text-white"><i class="fas fa-briefcase"></i></a>
+                                <a href="https://github.com/AlejoMBDev" class="hover:text-white"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/alejombdev" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://x.com/AlejoMBDev1498" target="_blank" class="hover:text-white"><i class="fab fa-x-twitter"></i></a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025. Jedasmic Systems || Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4 text-2xl">
+                <a href="https://www.linkedin.com/jedasmic-systems" class="hover:text-indigo-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.behance.net/jedasmic_systems" class="hover:text-indigo-400 transition-colors"><i class="fab fa-behance"></i></a>
+                <a href="https://x.com/Jedasmic_S" class="hover:text-indigo-400 transition-colors"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
